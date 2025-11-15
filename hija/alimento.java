@@ -9,7 +9,7 @@ public class alimento extends articulo {
 private String fechaCaducidad;
 
 public alimento(String sku, String nombre, double precio, estado estadoActual,String fechaCaducidad) {
-    super(sku, nombre, precio);
+    super(sku, nombre, precio, estadoActual);
     this.fechaCaducidad = fechaCaducidad;
 }
 
@@ -22,6 +22,7 @@ return fechaCaducidadDate.isAfter(fechaActual);
 
 @Override
 public double calcularDescuento(double porcentaje) {
-    return precio * (1 - porcentaje);
+    precio = precio * (1 - porcentaje);
+    return precio;
 }
 }

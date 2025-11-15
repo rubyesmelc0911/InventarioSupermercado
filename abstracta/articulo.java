@@ -1,15 +1,17 @@
-
 package abstracta;
+import enumP.estado;
 
 public abstract class articulo{
     protected String sku;
     protected String nombre;
     protected double precio;
+    protected estado estadoAtr;
 
-    public articulo(String sku, String nombre, double precio) {
+    public articulo(String sku, String nombre, double precio, estado estadoAtrEstado) {
         this.sku = sku;
         this.nombre = nombre;
         this.precio = precio;
+        this.estadoAtr = estadoAtrEstado;
     }
 
     public String getSku() {
@@ -35,6 +37,6 @@ public abstract class articulo{
     public abstract boolean verificarValidez();
 
     public abstract double calcularDescuento(double porcentaje);
-
+    
 
 }

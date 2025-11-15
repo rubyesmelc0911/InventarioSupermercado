@@ -8,7 +8,7 @@ public class electronico extends articulo {
     private boolean esReacondicionado;
 
     public electronico(String sku, String nombre, double precio, estado estadoActual, int garantiaMeses, boolean esReacondicionado) {
-        super(sku, nombre, precio);
+        super(sku, nombre, precio, estadoActual );
         this.garantiaMeses = garantiaMeses;
         this.esReacondicionado = esReacondicionado;
     }
@@ -23,7 +23,8 @@ public class electronico extends articulo {
         if (esReacondicionado) {
             porcentaje += 0.20;
         }
-        return precio * (1-porcentaje);
+        precio = precio * (1-porcentaje);
+        return precio;
     }
     
 }
