@@ -1,6 +1,5 @@
 
 package abstracta;
-import enumP.estado;
 
 public abstract class articulo{
     protected String sku;
