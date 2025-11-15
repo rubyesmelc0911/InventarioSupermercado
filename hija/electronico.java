@@ -12,6 +12,9 @@ public class electronico extends articulo {
         this.garantiaMeses = garantiaMeses;
         this.esReacondicionado = esReacondicionado;
     }
+    public boolean isReacondicionado(){
+        return esReacondicionado;
+    }
 
     @Override
     public boolean verificarValidez(){

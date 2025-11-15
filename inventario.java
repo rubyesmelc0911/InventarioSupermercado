@@ -5,17 +5,23 @@ import hija.alimento;
 import hija.electronico;
 
 import java.util.ArrayList;
+//Ruby Esmeralda Lopez Correa y Citlali Garcia Espinoza
 
 public class inventario {
     ArrayList<articulo> inv = new ArrayList<articulo>();
 
     public void aplicarOfertasFinDeSemana(){
-       for(int i=0; i<inv.size();i++){
-        articulo art = inv.get(i); //metodo usando arraylist para obtener el objeto buscado
+       for(articulo art : inv){
         //llamada usando polimorfismo
         System.out.println("Articulo: "+ art.getNombre());
         System.out.println("SKU: "+ art.getSku());
         System.out.println("Precio original: "+ art.getPrecio());
+        if(art instanceof electronico){
+            electronico e = (electronico) art; //convierte la referencia de tipo articulo a electronico
+            if(e.isReacondicionado()){
+                System.out.println("Reacondicionado");
+            }
+        }
         art.calcularDescuento(0.10);
         System.out.println("Precio con descuento: "+ art.getPrecio());
         System.out.println("-------------------------------------");
