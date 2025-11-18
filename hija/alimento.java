@@ -13,6 +13,7 @@ public alimento(String sku, String nombre, double precio, estado estadoActual,St
     this.fechaCaducidad = fechaCaducidad;
 }
 
+//uso del polimorfismo
 @Override
 public boolean verificarValidez() {
 LocalDate fechaActual = LocalDate.now();

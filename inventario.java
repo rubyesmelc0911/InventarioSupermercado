@@ -1,6 +1,5 @@
 import abstracta.articulo;
 import enumP.estado;
-import abstracta.articulo;
 import hija.alimento;
 import hija.electronico;
 
@@ -22,7 +21,7 @@ public class inventario {
                 System.out.println("Reacondicionado");
             }
         }
-        art.calcularDescuento(0.10);
+        art.calcularDescuento(0.10); //hacer llamada al descuento
         System.out.println("Precio con descuento: "+ art.getPrecio());
         System.out.println("-------------------------------------");
        }
